@@ -46,9 +46,10 @@ https://github.com/osvalj/ecommerce-ga4-business-analysis
 
 - GA4  
 - BigQuery (GCP)  
-- Looker Studio  
+- Looker Studio , Power BI, Tableau 
 - SQL  
-- Google Sheets / Excel  
+- Google Sheets / Excel
+- Python (NumPy, Pandas, Matplotlib, Seaborn)
 
 ---
 
