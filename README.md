@@ -2,6 +2,8 @@
 
 # Osval Hernández  
 **Data Analyst | Business-oriented analytics & decision-making**
+🇪🇸 Spanish version available: README_ES.md
+
 
 I am a Data Analyst focused on transforming data into actionable insights for business and product teams.  
 My work combines analytical rigor with a strong understanding of business context, prioritizing clarity, impact, and decision support over vanity metrics.
