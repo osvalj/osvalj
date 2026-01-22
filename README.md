@@ -18,7 +18,8 @@ I build end-to-end analytics solutions: from defining KPIs and analyzing user be
 - SQL (BigQuery)  
 - Looker Studio (BI & dashboards)  
 - Data visualization & storytelling  
-- Funnel analysis & conversion optimization  
+- Funnel analysis & conversion optimization
+- AI & LLMs (Applied)
 
 ---
 
@@ -45,11 +46,12 @@ https://github.com/osvalj/ecommerce-ga4-business-analysis
 ## 🔹 Tools & Stack
 
 - GA4  
-- BigQuery (GCP)  
+- BigQuery (GCP) , MySQL 
 - Looker Studio , Power BI, Tableau 
 - SQL  
 - Google Sheets / Excel
 - Python (NumPy, Pandas, Matplotlib, Seaborn)
+- Visual Studio
 
 ---
 
