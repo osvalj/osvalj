@@ -1,6 +1,6 @@
 # Hi, I'm Osval 👋
 
-I'm a data scientist with a background in analytics, currently finishing a Master's in Data Science & AI. My work sits at the intersection of machine learning and business intelligence — I build things that are technically solid and actually useful to the people who need them.
+I'm a data scientist with a background in analytics, currently finishing a Master's in Data Science & AI. My work sits at the intersection of machine learning and business intelligence. I build things that are technically solid and actually useful to the people who need them.
 
 What I've learned from working in analytics is that the hardest part is rarely the model. It's framing the right question, communicating the result clearly, and making sure something gets decided because of the work. I carry that mindset into everything I build.
 
