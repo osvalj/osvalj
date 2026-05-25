@@ -24,7 +24,7 @@ Both methods ended up at nearly identical Top-1 accuracy (≈70%), but through v
 
 ---
 
-**Windows Defender Malware Detection** — [view repository](#)  
+**Windows Defender Malware Detection** — [view repository](https://github.com/osvalj/Windows-Defender-Malware-Detection)  
 Binary classification on Microsoft's Windows Defender telemetry dataset. The modeling part was straightforward; the real work was in the pipeline — hundreds of features with mixed types, high cardinality, and a lot of missing data that each needed a different treatment decision.
 
 We built a custom `EDAInspector` class to track every preprocessing decision (what to drop, what to impute, and why), three separate sklearn pipelines for numeric, low-cardinality, and high-cardinality features, and tuned the classification threshold explicitly — because in malware detection, a false negative isn't the same cost as a false positive. Three models compared: Decision Tree, Random Forest, and LightGBM.
