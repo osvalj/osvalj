@@ -15,7 +15,7 @@ I've been deliberate about the clinical framing before writing a single line of 
 
 ---
 
-**Image Classification on CIFAR-100: Transfer Learning vs Custom CNN** — [view repository](#)  
+**Image Classification on CIFAR-100: Transfer Learning vs Custom CNN** — [view repository](https://github.com/osvalj/Image-Classification-on-CIFAR-100-Transfer-Learning-vs-Custom-CNN)  
 A deep learning project comparing two approaches on one of the harder standard benchmarks: 100 classes, 32×32 images, 500 training examples per class. We ran EfficientNetB0 and MobileNetV2 through feature extraction to pick the stronger backbone, then fine-tuned it — and built a custom ResNet-style network from scratch to compare against it under the same conditions.
 
 Both methods ended up at nearly identical Top-1 accuracy (≈70%), but through very different paths. The transfer learning model converged faster and produced better-calibrated probabilities. The custom CNN matched it on accuracy with fewer parameters, but at the cost of a significantly higher loss. The interesting part wasn't the final number — it was understanding what each trade-off actually means in practice.
