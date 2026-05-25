@@ -15,12 +15,21 @@ I've been deliberate about the clinical framing before writing a single line of 
 
 ---
 
-**Windows Defender Malware Detection** — [view repository](https://github.com/osvalj/ecommerce-ga4-business-analysis) 
+**Image Classification on CIFAR-100: Transfer Learning vs Custom CNN** — [view repository](#)  
+A deep learning project comparing two approaches on one of the harder standard benchmarks: 100 classes, 32×32 images, 500 training examples per class. We ran EfficientNetB0 and MobileNetV2 through feature extraction to pick the stronger backbone, then fine-tuned it — and built a custom ResNet-style network from scratch to compare against it under the same conditions.
+
+Both methods ended up at nearly identical Top-1 accuracy (≈70%), but through very different paths. The transfer learning model converged faster and produced better-calibrated probabilities. The custom CNN matched it on accuracy with fewer parameters, but at the cost of a significantly higher loss. The interesting part wasn't the final number — it was understanding what each trade-off actually means in practice.
+
+*Stack: Python · TensorFlow/Keras · EfficientNetB0 · MobileNetV2 · NumPy*
+
+---
+
+**Windows Defender Malware Detection** — [view repository](#)  
 Binary classification on Microsoft's Windows Defender telemetry dataset. The modeling part was straightforward; the real work was in the pipeline — hundreds of features with mixed types, high cardinality, and a lot of missing data that each needed a different treatment decision.
 
-We built a custom `EDAInspector` class to track every preprocessing decision (what to drop, what to impute, and why), three separate sklearn pipelines for numeric, low-cardinality, and high-cardinality features, and tuned the classification threshold explicitly — because in malware detection, a false negative isn't the same cost as a false positive.
+We built a custom `EDAInspector` class to track every preprocessing decision (what to drop, what to impute, and why), three separate sklearn pipelines for numeric, low-cardinality, and high-cardinality features, and tuned the classification threshold explicitly — because in malware detection, a false negative isn't the same cost as a false positive. Three models compared: Decision Tree, Random Forest, and LightGBM.
 
-*Stack: Python · scikit-learn · Pandas · Decision Tree · RandomizedSearchCV*
+*Stack: Python · scikit-learn · LightGBM · Pandas · RandomizedSearchCV*
 
 ---
 
@@ -42,9 +51,9 @@ On the technical side, I'm strict about reproducibility: clean preprocessing pip
 ## Stack
 
 **Data Science & ML**  
-Python · scikit-learn · Pandas · NumPy · Matplotlib · Seaborn  
-SHAP · ydata-profiling · Sweetviz  
-Supervised learning · Feature engineering · Pipeline design · Threshold tuning
+Python · TensorFlow/Keras · scikit-learn · Pandas · NumPy · Matplotlib · Seaborn  
+SHAP · LightGBM · ydata-profiling · Sweetviz  
+Supervised learning · Transfer learning · Feature engineering · Pipeline design
 
 **Analytics & BI**  
 SQL · BigQuery (GCP) · MySQL  
@@ -59,3 +68,4 @@ Google Sheets / Excel
 
 📧 hernandez.velez.oj@gmail.com  
 💼 [LinkedIn](https://www.linkedin.com/in/osvalhernandez)
+
