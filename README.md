@@ -1,6 +1,6 @@
 # Hi, I'm Osval 👋
 
-I'm a data scientist with a background in analytics, with a Master's in Data Science & AI. My work sits at the intersection of machine learning and business intelligence. I build things that are technically solid and actually useful to the people who need them.
+I'm a data scientist and AI practitioner with a background in analytics, with a Master's in Data Science & AI. My work sits at the intersection of machine learning, business intelligence and applied AI — building things that are technically solid and actually useful to the people who need them.
 
 What I've learned from working in analytics is that the hardest part is rarely the model. It's framing the right question, communicating the result clearly, and making sure something gets decided because of the work. I carry that mindset into everything I build.
 
@@ -8,35 +8,48 @@ What I've learned from working in analytics is that the hardest part is rarely t
 
 ## Projects
 
-**Cardiovascular Disease Risk Predictor** *(in progress)*  
+### Autonomous Job Search Agent ·  [view repository](https://github.com/osvalj/job-hunter-agent)
+An end-to-end AI agent that automates the repetitive part of job searching — so the time goes to applying, not to scrolling.
+
+Every morning it scrapes job offers across multiple portals (Indeed, LinkedIn, Tecnoempleo), deduplicates across sources, scores each offer 1–10 using the Claude API against a detailed candidate profile with prompt-engineered instructions for honest gap assessment, applies geographic filtering logic, and serves a Flask dashboard for review and status management. Runs autonomously via LaunchAgent scheduling.
+
+The interesting engineering was in the scoring system: getting the model to assess fit honestly — flagging real gaps, not just finding reasons to apply — required deliberate prompt design and iteration. The geo filter also involved a non-trivial classification problem: not all "remote" offers are equal, and not all "on-site" offers are impossible.
+
+From 2 hours of daily manual search to 15 minutes reviewing pre-filtered, pre-scored offers.
+
+`Stack: Python · Anthropic Claude API · prompt engineering · n8n · BeautifulSoup · Flask · SQLite · LaunchAgent`
+
+---
+
+### Cardiovascular Disease Risk Predictor *(in progress)*
 A web application for cardiovascular risk assessment, designed for both patients and primary care physicians. Built around a supervised ML model with SHAP-based explainability — so the predictions aren't just accurate, they're interpretable by clinicians and patients who need to trust them. Includes longitudinal tracking to monitor how risk evolves over time. Interface in Spanish.
 
 I've been deliberate about the clinical framing before writing a single line of code. Getting the problem definition right matters more than getting to deployment fast.
 
 ---
 
-**Image Classification on CIFAR-100: Transfer Learning vs Custom CNN** — [view repository](https://github.com/osvalj/Image-Classification-on-CIFAR-100-Transfer-Learning-vs-Custom-CNN)  
+### Image Classification on CIFAR-100: Transfer Learning vs Custom CNN · [view repository]([https://github.com/osvalj](https://github.com/osvalj/Image-Classification-on-CIFAR-100-Transfer-Learning-vs-Custom-CNN))
 A deep learning project comparing two approaches on one of the harder standard benchmarks: 100 classes, 32×32 images, 500 training examples per class. We ran EfficientNetB0 and MobileNetV2 through feature extraction to pick the stronger backbone, then fine-tuned it — and built a custom ResNet-style network from scratch to compare against it under the same conditions.
 
 Both methods ended up at nearly identical Top-1 accuracy (≈70%), but through very different paths. The transfer learning model converged faster and produced better-calibrated probabilities. The custom CNN matched it on accuracy with fewer parameters, but at the cost of a significantly higher loss. The interesting part wasn't the final number — it was understanding what each trade-off actually means in practice.
 
-*Stack: Python · TensorFlow/Keras · EfficientNetB0 · MobileNetV2 · NumPy*
+`Stack: Python · TensorFlow/Keras · EfficientNetB0 · MobileNetV2 · NumPy`
 
 ---
 
-**Windows Defender Malware Detection** — [view repository](https://github.com/osvalj/Windows-Defender-Malware-Detection)  
+### Windows Defender Malware Detection · [view repository]([https://github.com/osvalj](https://github.com/osvalj/Windows-Defender-Malware-Detection))
 Binary classification on Microsoft's Windows Defender telemetry dataset. The modeling part was straightforward; the real work was in the pipeline — hundreds of features with mixed types, high cardinality, and a lot of missing data that each needed a different treatment decision.
 
-We built a custom `EDAInspector` class to track every preprocessing decision (what to drop, what to impute, and why), three separate sklearn pipelines for numeric, low-cardinality, and high-cardinality features, and tuned the classification threshold explicitly — because in malware detection, a false negative isn't the same cost as a false positive. Three models compared: Decision Tree, Random Forest, and LightGBM.
+We built a custom EDAInspector class to track every preprocessing decision (what to drop, what to impute, and why), three separate sklearn pipelines for numeric, low-cardinality, and high-cardinality features, and tuned the classification threshold explicitly — because in malware detection, a false negative isn't the same cost as a false positive. Three models compared: Decision Tree, Random Forest, and LightGBM.
 
-*Stack: Python · scikit-learn · LightGBM · Pandas · RandomizedSearchCV*
+`Stack: Python · scikit-learn · LightGBM · Pandas · RandomizedSearchCV`
 
 ---
 
-**Ecommerce Performance Analysis with GA4** — [view repository](https://github.com/osvalj/ecommerce-ga4-business-analysis)  
+### Ecommerce Performance Analysis with GA4 · [[view repository](https://github.com/osvalj](https://github.com/osvalj/ecommerce-ga4-business-analysis))
 An end-to-end business analysis of an ecommerce platform dealing with a specific problem: traffic was growing but revenue wasn't. I worked through funnel drop-offs, channel efficiency, and product performance to understand where the breakdown was happening — and structured the output as a decision-ready report for a growth or product team, not just a collection of charts.
 
-*Stack: GA4 · BigQuery · SQL · Looker Studio*
+`Stack: GA4 · BigQuery · SQL · Looker Studio`
 
 ---
 
@@ -46,25 +59,33 @@ I start with the business question and work backward from there. What decision d
 
 On the technical side, I'm strict about reproducibility: clean preprocessing pipelines, proper train/validation/test splits, no data leakage. And I put real weight on explainability — if a model influences something that matters to real people, the people using it need to understand why it's saying what it's saying.
 
+For applied AI work, the same principle holds: a system that automates a process needs to be debuggable, honest about its limitations, and designed so a human can review and override it. Automation without interpretability is just a black box with a cron job.
+
 ---
 
 ## Stack
 
-**Data Science & ML**  
-Python · TensorFlow/Keras · scikit-learn · Pandas · NumPy · Matplotlib · Seaborn  
-SHAP · LightGBM · ydata-profiling · Sweetviz  
+**Data Science & ML**
+Python · TensorFlow/Keras · scikit-learn · Pandas · NumPy · Matplotlib · Seaborn
+SHAP · LightGBM · ydata-profiling · Sweetviz
 Supervised learning · Transfer learning · Feature engineering · Pipeline design
 
-**Analytics & BI**  
-SQL · BigQuery (GCP) · MySQL  
-Google Analytics 4 · Looker Studio · Power BI · Tableau  
+**Applied AI & Automation**
+Anthropic Claude API · OpenAI API · prompt engineering · AI agent development
+n8n · RAG (basics) · LLM integration from code
+
+**Analytics & BI**
+SQL · BigQuery (GCP) · MySQL
+Google Analytics 4 · Looker Studio · Power BI · DAX
 Google Sheets / Excel
 
-*Google Analytics (GA4) certified.*
+**Other**
+Flask · SQLite · Git · REST APIs · BeautifulSoup
+
+Google Analytics (GA4) certified.
 
 ---
 
 ## Contact
-
-📧 hernandez.velez.oj@gmail.com  
+📧 hernandez.velez.oj@gmail.com
 💼 [LinkedIn](https://www.linkedin.com/in/osvalhernandez)
