@@ -8,7 +8,7 @@ What I've learned from working in analytics is that the hardest part is rarely t
 
 ## Projects
 
-### Autonomous Job Search Agent ·  [view repository](https://github.com/osvalj/job-hunter-agent)
+### Autonomous Job Search Agent ·  [view repository](https://github.com/osvalj/job_hunter)
 An end-to-end AI agent that automates the repetitive part of job searching — so the time goes to applying, not to scrolling.
 
 Every morning it scrapes job offers across multiple portals (Indeed, LinkedIn, Tecnoempleo), deduplicates across sources, scores each offer 1–10 using the Claude API against a detailed candidate profile with prompt-engineered instructions for honest gap assessment, applies geographic filtering logic, and serves a Flask dashboard for review and status management. Runs autonomously via LaunchAgent scheduling.
