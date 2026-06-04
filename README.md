@@ -37,7 +37,7 @@ Both methods ended up at nearly identical Top-1 accuracy (≈70%), but through v
 
 ---
 
-### Windows Defender Malware Detection · [view repository]([https://github.com/osvalj](https://github.com/osvalj/Windows-Defender-Malware-Detection))
+### Windows Defender Malware Detection · [view repository](https://github.com/osvalj/Windows-Defender-Malware-Detection)
 Binary classification on Microsoft's Windows Defender telemetry dataset. The modeling part was straightforward; the real work was in the pipeline — hundreds of features with mixed types, high cardinality, and a lot of missing data that each needed a different treatment decision.
 
 We built a custom EDAInspector class to track every preprocessing decision (what to drop, what to impute, and why), three separate sklearn pipelines for numeric, low-cardinality, and high-cardinality features, and tuned the classification threshold explicitly — because in malware detection, a false negative isn't the same cost as a false positive. Three models compared: Decision Tree, Random Forest, and LightGBM.
@@ -46,7 +46,7 @@ We built a custom EDAInspector class to track every preprocessing decision (what
 
 ---
 
-### Ecommerce Performance Analysis with GA4 · [[view repository](https://github.com/osvalj](https://github.com/osvalj/ecommerce-ga4-business-analysis))
+### Ecommerce Performance Analysis with GA4 · [[view repository](https://github.com/osvalj/ecommerce-ga4-business-analysis)
 An end-to-end business analysis of an ecommerce platform dealing with a specific problem: traffic was growing but revenue wasn't. I worked through funnel drop-offs, channel efficiency, and product performance to understand where the breakdown was happening — and structured the output as a decision-ready report for a growth or product team, not just a collection of charts.
 
 `Stack: GA4 · BigQuery · SQL · Looker Studio`
