@@ -46,7 +46,7 @@ We built a custom EDAInspector class to track every preprocessing decision (what
 
 ---
 
-### Ecommerce Performance Analysis with GA4 · [[view repository](https://github.com/osvalj/ecommerce-ga4-business-analysis)
+### Ecommerce Performance Analysis with GA4 · [view repository](https://github.com/osvalj/ecommerce-ga4-business-analysis)
 An end-to-end business analysis of an ecommerce platform dealing with a specific problem: traffic was growing but revenue wasn't. I worked through funnel drop-offs, channel efficiency, and product performance to understand where the breakdown was happening — and structured the output as a decision-ready report for a growth or product team, not just a collection of charts.
 
 `Stack: GA4 · BigQuery · SQL · Looker Studio`
